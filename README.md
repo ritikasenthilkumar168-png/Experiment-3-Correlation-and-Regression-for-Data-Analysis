@@ -22,11 +22,66 @@
 
 <img width="1143" height="477" alt="image" src="https://github.com/user-attachments/assets/d3d41b8d-bee6-4b5f-a6fe-ef6997126cf2" />
 
-# Program
+# Program:
+# Name: Ritika. S
+# Reg No: 25009202
+# Slot Name: 3P1-1
+
+```
+import numpy as np
+import math
+import matplotlib.pyplot as plt
+x=[int(i)for i in input("Enter x values(space separated):").split()]
+y=[int(i)for i in input("Enter y values(space separated):").split()]
+if len(x)!=len(y):
+  raise SystemExit("Error:x and y must have the same number of values.")
+N=len(x)
+Sx=0
+Sy=0
+Sxy=0
+Sx2=0
+Sy2=0
+for i in range(N):
+  Sx+=x[i]
+  Sy+=y[i]
+  Sxy+=x[i]*y[i]
+  Sx2+=x[i]**2
+  Sy2+=y[i]**2
+den = math.sqrt((N * Sx2 - Sx*2) * (N * Sy2 - Sy*2)) 
+if den == 0: 
+    raise SystemExit("Denominator zero when computing correlation.") 
+r = (N * Sxy - Sx * Sy) / den 
+print("The Correlation coefficient is %0.3f" % r) 
+ 
+byx = (N * Sxy - Sx * Sy) / (N * Sx2 - Sx**2) 
+  
+xmean = Sx / N 
+ymean = Sy / N 
+ 
+print("The Regression line Y on X is ::: y = %0.3f + %0.3f (x-%0.3f)" % (ymean, byx, 
+xmean)) 
+plt.scatter(x, y) 
+def Reg(xv): 
+    return ymean + byx * (xv - xmean) 
+x_plot = np.linspace(min(x), max(x), 51) 
+y_plot = Reg(x_plot) 
+plt.plot(x_plot, y_plot, 'r') 
+plt.xlabel('x-data') 
+plt.ylabel('y-data') 
+plt.legend(['Regression Line', 'Data points']) 
+plt.grid(True) 
+plt.show()
+```
+# Collab Link:
+https://colab.research.google.com/drive/10EMWMxUI9IvyziVSsNRHWgPpBuE7PJg2?usp=sharing
 
 
 
 # Output
+```
+<img width="849" height="669" alt="Screenshot 2025-11-17 142405" src="https://github.com/user-attachments/assets/542370b1-ea7d-40f9-9cc4-e44f55ae8982" />
+
+
 
 
 # Result
