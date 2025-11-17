@@ -78,8 +78,9 @@ https://colab.research.google.com/drive/10EMWMxUI9IvyziVSsNRHWgPpBuE7PJg2?usp=sh
 
 
 # Output
-```
+
 <img width="849" height="669" alt="Screenshot 2025-11-17 142405" src="https://github.com/user-attachments/assets/542370b1-ea7d-40f9-9cc4-e44f55ae8982" />
+
 
 
 
